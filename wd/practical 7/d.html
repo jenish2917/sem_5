@@ -1,0 +1,70 @@
+<!-- Create a webpage containing one button. clicking on this button changes the size of the window & position. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        button{
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color  0.3s ease;
+        }
+
+        button:hover{
+            background-color: #0056B3;
+        }
+
+        @media (max-width: 600px) {
+            button{
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px){
+            button{
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button onclick="resizeAndMoveWindow()">Raise and move Window</button>
+    <script>
+        function resizeAndMoveWindow(){
+            const screenWidth =  window.screen.availWidth;
+            const screenHeight = window.screen.availHeight;
+
+            const newWidth = Math.min(800, screenWidth*0.8);
+            const newHeight = Math.min(600, screenHeight*0.8);
+            const newPositionX = Math.min(screenWidth - newWidth) / 2;
+            const newPositionY = Math.min(screenHeight - newHeight) / 2;
+
+            // resize the window 
+            window.resizeTo(newWidth, newHeight);
+
+            // move the window to the center of the screen
+            window.moveTo(newPositionX, newPositionY);
+
+        }
+    </script>
+</body>
+</html>

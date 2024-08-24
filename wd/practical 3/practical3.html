@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple form</title>
+</head>
+<body>
+    <form action="/submit-form" method="post">
+        <fieldset>
+            <legend >Login now</legend>
+            <label for=" user name ">Please Enter your user name</label>
+            <input type="text"><br>
+
+            <label for="password">Your password is:</label>
+            <input type="text"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choice!</legend>
+            <label for="color">Fevorite color</label>
+            <input type="text" value="Green"><br>
+
+            <label for="fruite">My Fevorite fruite is </label>
+            <select name="Apple" id="Apple">
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Orange">Orange</option><br>
+                <br>
+            </select>
+
+            <label for="house">i live in</label>
+            <input type="radio" value="house">
+            <label for="House">House</label>
+            <input type="radio" value="Flate">
+            <label for="Flate">Flate</label>
+            <input type="radio" value="caravan">
+            <label for="caravan">Caravan</label>
+            <br>
+
+            <label for="sport">My Fevorite sport are </label>
+            <input type="checkbox" value="Football">
+            <label for="Football">Football</label>
+            <input type="checkbox" value="cricket">
+            <label for="cricket">cricket</label>
+            <input type="checkbox" value="Tennis">
+            <label for="Tennis">Tennis</label>
+            <input type="checkbox" value="hockey">
+            <label for="hockey">hockey</label>
+            <br>
+
+            <label for="file">My Uploaded file is </label>
+            <input type="file" name="file" id="file" accept="image/*">
+         
+        </fieldset>
+
+        <fieldset>
+            <legend>Leaving ?</legend>
+            <label for="Message">You can leave Message here:</label>
+            <textarea name="Message" id="Message" cols="30" rows="10"></textarea><br>
+            <input type="button" value="go!">
+            <input type="button" value="Start again">
+        </fieldset>
+    </form>
+</body>
+</html>

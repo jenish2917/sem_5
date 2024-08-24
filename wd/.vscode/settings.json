@@ -1,0 +1,6 @@
+{
+  "debug.openExplorerOnEnd": false,
+  "workbench.editor.openSideBySideDirection": "right",
+  "explorer.openEditors.sortOrder": "editorOrder",
+  "explorer.incrementalNaming": "smart"
+}

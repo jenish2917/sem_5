@@ -1,0 +1,77 @@
+<!-- Put three buttons “OPEN NEW WINDOW”,”CLOSE CHILD WINDOW”,”CLOSE MAIN WINDOW” in the main HTML page, on click of the first button, execute some JavaScript code that will open one child window. Clicking on the second button child window will close and the third button main html page will close. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+
+        button{
+            margin: 10px;
+            padding: 15px 30px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 200px;
+            text-align: center;
+        }
+
+        button:hover{
+            background-color: #0056B3;
+        }
+
+        @media (max-width: 600px) {
+            button{
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px){
+            button{
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button  onclick="openChildWindow()">OPEN NEW WINDOW</button>
+    <button  onclick="closeChildWindow()">CLOSE CHILD WINDOW</button>
+    <button  onclick="closeMainWindow()">CLOSE MAIN WINDOW</button>
+
+    <script>
+        let childWindow;
+
+        function openChildWindow(){
+            childWindow = window.open("", "childWindow", "width=600,height=400");
+            childWindow.document.write("<h1>Child Window</h1>");
+        }
+
+        function closeChildWindow(){
+            if (childWindow != null && !childWindow.closed) {
+                childWindow.close();
+            }
+        }
+
+        function closeMainWindow(){
+            window.close();
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* Global CSS Variables */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FFC107;
+  --font-size: 16px;
+  --padding: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Using Global Variables */
+.global-example {
+  color: green;
+  background-color: black;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+/* Local CSS Variables */
+.local-example {
+  --local-primary-color: #FF5722;
+  --local-secondary-color: #03A9F4;
+  --local-font-size: 18px;
+  --local-padding: 15px;
+
+  color: red;
+  background-color: lightblue;
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.global-example h1, .local-example h1 {
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+}
+
+.global-example p, .local-example p {
+  margin: 0;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables Example</title>
+  <link rel="stylesheet" href="a.css">
+</head>
+<body>
+  <div class="global-example">
+    <h1>Global CSS Variables</h1>
+    <p>This text uses global CSS variables for styling.</p>
+  </div>
+  <div class="local-example">
+    <h1>Local CSS Variables</h1>
+    <p>This text uses local CSS variables for styling.</p>
+  </div>
+</body>
+</html>

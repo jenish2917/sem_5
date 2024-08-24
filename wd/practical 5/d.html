@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/submit-form" method="post">
+            <fieldset>
+                <legend>Login now</legend>
+                <label for="username">Please Enter your user name</label>
+                <input type="text" id="username" name="username"><br>
+
+                <label for="password">Your password is:</label>
+                <input type="password" id="password" name="password"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Choice!</legend>
+                <label for="color">Favorite color</label>
+                <input type="text" id="color" name="color" value="Green"><br>
+
+                <label for="fruit">My Favorite fruit is</label>
+                <select name="fruit" id="fruit">
+                    <option value="Apple">Apple</option>
+                    <option value="Banana">Banana</option>
+                    <option value="Orange">Orange</option>
+                </select><br>
+
+                <label>I live in</label>
+                <input type="radio" id="house" name="residence" value="House">
+                <label for="house">House</label>
+                <input type="radio" id="flat" name="residence" value="Flat">
+                <label for="flat">Flat</label>
+                <input type="radio" id="caravan" name="residence" value="Caravan">
+                <label for="caravan">Caravan</label><br>
+
+                <label>My Favorite sports are</label>
+                <input type="checkbox" id="football" name="sports" value="Football">
+                <label for="football">Football</label>
+                <input type="checkbox" id="cricket" name="sports" value="Cricket">
+                <label for="cricket">Cricket</label>
+                <input type="checkbox" id="tennis" name="sports" value="Tennis">
+                <label for="tennis">Tennis</label>
+                <input type="checkbox" id="hockey" name="sports" value="Hockey">
+                <label for="hockey">Hockey</label><br>
+
+                <label for="file">My Uploaded file is</label>
+                <input type="file" id="file" name="file" accept="image/*"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Leaving?</legend>
+                <label for="message">You can leave a message here:</label>
+                <textarea id="message" name="message" cols="30" rows="10"></textarea><br>
+                <input type="submit" value="Go!">
+                <input type="reset" value="Start again">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+
+section h2::first-letter {
+  font-size: 2em;
+  color: #4CAF50;
+}
+
+
+a:visited {
+  color: #9c27b0;
+}
+
+
+footer p::before {
+  content: "© ";
+}
+
+/* Pseudo-class for styling the first child of a section */
+section:first-child {
+  border-top: 2px solid #4CAF50;
+  padding-top: 10px;
+}
+
+/* Pseudo-class for styling the last child of a section */
+section:last-child {
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-classes and Pseudo-elements Example</title>
+  <link rel="stylesheet" href="b.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Web Page</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>About Us</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu.</p>
+    </section>
+    <section>
+      <h2>Services</h2>
+      <p>We offer a wide range of services to meet your needs. Get in touch to learn more.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 My Web Page. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing  Background Color using JavaScript</title>
+    <style>
+        body{
+            transition:  background-color 1s ease-in-out;
+            display : flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: auto;
+            font-family:  Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container{
+            font-size: 2rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0,0,0,.2);
+            max-width: 90%;
+            word-wrap: break-word;
+        }
+
+        .container{
+            animation: fadeInOut 4s  infinite;
+        }
+
+        @keyframe fadeInOut{
+            0%,100%{opacity: 1;}
+            50%{opacity: 0.5;}
+        }
+
+        @media(max-width: 400px){
+            .container{
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Color changing
+    </div>
+
+    <script>
+        // function to generate rendom colour
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // function to change the bacground color repeatedly
+        function changeBackgroundColor(){
+            document.body.style.backgroundColor = getRandomColor();
+        }
+
+        // set an interval to change the color every 3 seconds
+        setInterval(changeBackgroundColor, 3000);
+    </script>
+</body>
+</html>
