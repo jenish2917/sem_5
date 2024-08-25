@@ -23,16 +23,14 @@
             display: inline-block;
             position: absolute;
             white-space: nowrap;
-            transform: translateX(100%);
+            transform: translateX(0);
         }
     </style>
 </head>
 <body>
 
 <div class="scroll-container">
-    <div id="scroll-text">
-        Scrolls message in the Status window of the browser.
-    </div>
+    <div id="scroll-text">Scrolls message in the Status window of the browser.</div>
 </div>
 
 <script>
@@ -42,22 +40,20 @@
         var textWidth = scrollText.offsetWidth;
 
         function scroll() {
-            scrollText.style.transform = 'translateX(' + containerWidth + 'px)';
-
             var distance = containerWidth + textWidth;
             var duration = distance * 10; // Adjust speed by changing this multiplier
 
             scrollText.style.transition = 'transform ' + duration + 'ms linear';
-            scrollText.style.transform = 'translateX(-' + textWidth + 'px)';
-
-            scrollText.addEventListener('transitionend', function() {
-                scrollText.style.transition = 'none';
-                scrollText.style.transform = 'translateX(' + containerWidth + 'px)';
-                setTimeout(scroll, 100); // Add a slight delay before restarting
-            }, { once: true });
+            scrollText.style.transform = 'translateX(-' + containerWidth + 'px)';
         }
 
         scroll();
+
+        scrollText.addEventListener('transitionend', function() {
+            scrollText.style.transition = 'none';
+            scrollText.style.transform = 'translateX(0)';
+            scroll();
+        }, { once: true });
     };
 </script>
 

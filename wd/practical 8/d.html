@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background and foreground color</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+    <div class="container">
+        <label for="bgColorSelect">Select Background Color:</label>
+        <select onchange="changeBackgroundColor()" id="bgColorSelect">
+            <option value="white">White</option>
+            <option value="lightblue">Light Blue</option>
+            <option value="lightgreen">Light Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="lightgray">Light Gray</option>
+        </select>
+
+        <label for="fgColorSelect">Select Foreground (Text) Color:</label>
+        <select onchange="changeForegroundColor()" id="fgColorSelect">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="brown">Brown</option>
+            <option value="purple">Purple</option>
+        </select>
+        <script src="d.js"></script>
+    </div>
+</body>
+</html>

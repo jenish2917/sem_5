@@ -1,0 +1,11 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+img {
+    width: 300px;
+    transition: transform 0.3s ease;
+}
