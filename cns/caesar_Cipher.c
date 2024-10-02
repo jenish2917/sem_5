@@ -7,7 +7,7 @@ void Encrypt(){
 
     printf("Enter the string to be encrypted\n");
     fgets(str, sizeof(str), stdin);
-    str[strlen(str) - 1] = '\0'; // remove the newline character
+    str[strlen(str) - 1] = '\0'; 
 
     for(int i=0;str[i]!='\0';i++){
         if(str[i]>='a' && str[i]<='z'){
@@ -28,7 +28,7 @@ void Decrypt(){
 
     printf("Enter the string to be decrypted\n");
     fgets(str, sizeof(str), stdin);
-    str[strlen(str) - 1] = '\0'; // remove the newline character
+    str[strlen(str) - 1] = '\0';
 
     for(int i=0;str[i]!='\0';i++){
         if(str[i]>='a' && str[i]<='z'){
@@ -54,7 +54,7 @@ int main() {
     int choice;
     printf("Enter your choice:\n1. Encrypt\n2. Decrypt\n");
     scanf("%d", &choice);
-    getchar(); // consume the newline character
+    getchar();
     switch(choice) {
         case 1:
             Encrypt();
