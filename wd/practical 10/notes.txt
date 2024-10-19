@@ -1,0 +1,69 @@
+types of machine learning :
+- supervised :
+    -regression :
+        - idea : predict the value of a continuous output variable based on one or more input features .
+
+    -classification :
+        - idea : predict the value of a categorical output variable based on one or more input features .
+
+
+- unsupervised :
+    -clustering :
+        - idea : group similar data points into clusters based on their features .
+
+    - dimensionality reduction :
+        - idea : reduce the number of features in a dataset while preserving the most important information .
+    
+    - Anomaly ditection
+        - idea : identify data points that are significantly different from the rest of the data (outlires).
+
+    - association :
+        - idea : identify relationships between variables in a dataset .
+
+    - recommendation
+    - deep learning
+
+- semisupervised :
+    - idea : use a combination of labeled and unlabeled data to improve the accuracy of a model
+    - example : google photos 
+
+-  reinforcement learning :
+    - idea : learn from trial and error by interacting with an environment and receiving rewards or penalties for
+
+Batch learning :
+- the model that is trained on the entire dataset at once.
+
+online  learning :
+- the model that is trained on a single data point at a time.
+- prediction as well as trainig of the data at the time
+- youtube
+- incremental learning in the number of multiple small Batches
+
+where to use :
+- The program which is changes continuously changes whith rispect to time then online lea is more preferable (Stock market)
+- cost effective
+- fast in solution
+
+how to implement : 
+- from the linear model SDGRegressor method eith partial_fir()
+- River library, vowpal wabbit
+
+learning : 
+- memorizing 
+- generalizing 
+
+MLDLC
+- MLDLC is a process of developing and deploying machine learning models in a production environment.
+- Frame the problem
+- Gathering data
+- Data preprocessing
+- Exploratory Data Analysis
+- Feature Engineering and Selection
+- Model trainig, Evaluation and Selection
+- Model deployment and monitoring
+- Testing
+- Optimize 
+
+Feature engineering:
+- Feature engineering is the process of using domain knowledge to extract from raw data. These feature can used to improve the performance of machine learning algorithm.
+ 
