@@ -20,7 +20,7 @@ int to_digit(int a, int b)
 {
     int output;
     if(a==1 && b==1)
-        output = 3;
+        output = 2;
 
     if(a==0 && b==1)
         output = 1;
